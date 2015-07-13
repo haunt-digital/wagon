@@ -14,6 +14,7 @@ require 'locomotive/wagon/server/page'
 require 'locomotive/wagon/server/timezone'
 require 'locomotive/wagon/server/templatized_page'
 require 'locomotive/wagon/server/renderer'
+require 'locomotive/wagon/server/haunt/autoprefixer'
 
 require 'locomotive/wagon/liquid'
 require 'locomotive/wagon/misc'
@@ -77,6 +78,8 @@ module Locomotive::Wagon
 
         use Page
         use TemplatizedPage
+
+        use Haunt::Autoprefixer
 
         run Renderer.new
       end

@@ -1,11 +1,9 @@
-puts 'Monkey patching steam for better rendering'
-
 begin
   require 'autoprefixer-rails'
-  AutoprefixerRails.install(Locomotive::Wagon::Server::DynamicAssets.sprockets)
 rescue LoadError
   puts 'Add autoprefixer-rails to your Gemfile!'
 end
+
 
 # module Locomotive::Steam
 #   module Middlewares
