@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in wagon.gemspec
 gemspec
 
+gem 'celluloid', '~> 0.16.0'
+
 # Development
 # gem 'locomotivecms-liquid', path: '../gems/liquid', require: false
 # gem 'locomotivecms-solid', path: '../gems/solid', require: false
