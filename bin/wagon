@@ -9,6 +9,4 @@ $stdout.sync = true
 require 'locomotive/wagon'
 require 'locomotive/wagon/cli'
 
-require File.expand_path(File.dirname(__FILE__) + '/../lib/haunt/monkey_patches.rb')
-
 Locomotive::Wagon::CLI::Main.start
