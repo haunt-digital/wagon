@@ -9,6 +9,6 @@ $stdout.sync = true
 require 'locomotive/wagon'
 require 'locomotive/wagon/cli'
 
-require './lib/haunt/monkey_patches'
+require './lib/haunt/monkey_patches.rb'
 
 Locomotive::Wagon::CLI::Main.start
