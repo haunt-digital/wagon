@@ -7,7 +7,7 @@ module Locomotive::Wagon
 
         def initialize(app, site_path)
           super(app)
-
+          puts '!!!!!!!!!!!!!!!!!!!'
           puts app.sprockets
         end
 
