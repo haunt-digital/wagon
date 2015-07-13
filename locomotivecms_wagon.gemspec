@@ -30,7 +30,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'rubyzip',               '~> 1.1.0'
   gem.add_dependency 'netrc',                 '~> 0.7.7'
 
-  gem.add_dependency 'celluloid'              '~> 0.16.0'
 
   gem.add_dependency 'listen',                '~> 2.7.5'
   gem.add_dependency 'rack-livereload',       '~> 0.3.15'
