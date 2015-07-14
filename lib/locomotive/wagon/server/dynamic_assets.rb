@@ -14,8 +14,6 @@ module Locomotive::Wagon
 
         begin
           AutoprefixerRails.install(@sprockets)
-        rescue
-          say 'Add autoprefixer-rails to your Gemfile!', :orange
         end
       end
 

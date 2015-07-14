@@ -1,7 +1,9 @@
+require 'thor'
+
 begin
   require 'autoprefixer-rails'
 rescue LoadError
-  say 'Add autoprefixer-rails to your Gemfile!', :orange
+  puts 'Add autoprefixer-rails to your Gemfile!'
 end
 
 # Patches
