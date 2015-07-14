@@ -11,6 +11,7 @@ module Locomotive::Wagon
         @regexp     = /^\/(javascripts|stylesheets)\/(.*)$/
 
         @sprockets  = Locomotive::Mounter::Extensions::Sprockets.environment(site_path)
+
         AutoprefixerRails.install(@sprockets)
       end
 
