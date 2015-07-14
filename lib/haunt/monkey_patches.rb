@@ -1,5 +1,3 @@
-require 'thor'
-
 begin
   require 'autoprefixer-rails'
 rescue LoadError
