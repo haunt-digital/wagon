@@ -1,7 +1,7 @@
 begin
   require 'autoprefixer-rails'
 rescue LoadError
-  puts 'Add autoprefixer-rails to your Gemfile!'
+  shell.say 'Add autoprefixer-rails to your Gemfile!', :orange
 end
 
 # Patches

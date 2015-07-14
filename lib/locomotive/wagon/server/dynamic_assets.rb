@@ -12,7 +12,11 @@ module Locomotive::Wagon
 
         @sprockets  = Locomotive::Mounter::Extensions::Sprockets.environment(site_path)
 
-        AutoprefixerRails.install(@sprockets)
+        begin
+          AutoprefixerRails.install(@sprockets)
+        rescue LoadError
+          shell.say 'Add autoprefixer-rails to your Gemfile!', :orange
+        end
       end
 
       def call(env)
