@@ -15,7 +15,7 @@ module Locomotive::Wagon
         begin
           AutoprefixerRails.install(@sprockets)
         rescue LoadError
-          shell.say 'Add autoprefixer-rails to your Gemfile!', :orange
+          say 'Add autoprefixer-rails to your Gemfile!', :orange
         end
       end
 
