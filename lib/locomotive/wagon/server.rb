@@ -79,8 +79,6 @@ module Locomotive::Wagon
         use Page
         use TemplatizedPage
 
-        use Haunt::Autoprefixer
-
         run Renderer.new
       end
     end
