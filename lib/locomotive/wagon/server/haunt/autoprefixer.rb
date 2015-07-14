@@ -6,7 +6,6 @@ module Locomotive::Wagon
         def initialize(app)
           super(app)
           puts '!!!!!!!!!!!!!!!!!!!'
-          puts app.sprockets
         end
 
         def call(env)
