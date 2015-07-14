@@ -3,9 +3,7 @@ module Locomotive::Wagon
     class Haunt
       class Autoprefixer < Middleware
 
-        attr_reader :app, :sprockets, :regexp
-
-        def initialize(app, site_path)
+        def initialize(app)
           super(app)
           puts '!!!!!!!!!!!!!!!!!!!'
           puts app.sprockets
