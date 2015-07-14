@@ -11,6 +11,12 @@ module Locomotive::Wagon
         @regexp     = /^\/(javascripts|stylesheets)\/(.*)$/
 
         @sprockets  = Locomotive::Mounter::Extensions::Sprockets.environment(site_path)
+
+        begin
+          AutoprefixerRails.install(@sprockets)
+        rescue
+          puts 'Add autoprefixer-rails to your Gemfile!'
+        end
       end
 
       def call(env)
