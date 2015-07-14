@@ -5,7 +5,7 @@ module Locomotive::Wagon
 
         def initialize(app)
           super(app)
-          puts Locomotive::Wagon::Server::DynamicAssets.sprockets
+          puts Locomotive::Wagon::Server::DynamicAssets.sprockets.class.name
         end
 
         def call(env)
