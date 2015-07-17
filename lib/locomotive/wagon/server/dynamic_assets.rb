@@ -13,7 +13,8 @@ module Locomotive::Wagon
         @sprockets = Locomotive::Mounter::Extensions::Sprockets.environment(site_path)
 
         @@hello = nil
-        unless @hello
+        unless @@hello
+          puts 'Initializing autprefixer'
           AutoprefixerRails::Sprockets.new(AutoprefixerRails::Processor.new({})).install(@sprockets, {})
           @@hello = 1
         end
