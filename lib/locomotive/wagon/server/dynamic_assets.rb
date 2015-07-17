@@ -4,8 +4,8 @@ module Locomotive::Wagon
     class DynamicAssets < Middleware
 
       attr_reader :app, :sprockets, :regexp
-      
-      @@hello = nil
+
+      @@initialized_autoprefixer = nil
 
       def initialize(app, site_path)
         super(app)
@@ -14,10 +14,10 @@ module Locomotive::Wagon
 
         @sprockets = Locomotive::Mounter::Extensions::Sprockets.environment(site_path)
 
-        unless @@hello
+        unless @@initialized_autoprefixer
           puts 'Initializing autprefixer'
-          AutoprefixerRails::Sprockets.new(AutoprefixerRails::Processor.new({})).install(@sprockets, {})
-          @@hello = 1
+          AutoprefixerRails.install(@sprockets)
+          @@initialized_autoprefixer = true
         end
       end
 
