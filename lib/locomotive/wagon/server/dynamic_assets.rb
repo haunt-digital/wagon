@@ -12,7 +12,11 @@ module Locomotive::Wagon
 
         @sprockets = Locomotive::Mounter::Extensions::Sprockets.environment(site_path)
 
-        AutoprefixerRails::Sprockets.new(AutoprefixerRails::Processor.new({})).install(@sprockets, {})
+        @@hello = nil
+        unless @hello
+          AutoprefixerRails::Sprockets.new(AutoprefixerRails::Processor.new({})).install(@sprockets, {})
+          @@hello = 1
+        end
       end
 
       def call(env)
