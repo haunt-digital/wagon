@@ -17,6 +17,8 @@ module Locomotive::Wagon
         if env['PATH_INFO'] =~ self.regexp
           env['PATH_INFO'] = $2
 
+          puts env['PATH_INFO']
+
           begin
             self.sprockets.call(env)
           rescue Exception => e
